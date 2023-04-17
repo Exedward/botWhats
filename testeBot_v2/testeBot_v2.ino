@@ -12,7 +12,7 @@ MM  mms(10);
 const char* ssid = "TP LINK";
 const char* password = "morais1212";
 bool statusDetect = 0;
-unsigned long lastTime = 0, cm = 10, timeIntervalUltra = 0;
+unsigned long cm = 10, timeIntervalUltra = 0;
 float distancia = 0;
 
 String apiKey = "3466759";
@@ -39,8 +39,6 @@ void loop(){
   } 
   if((distancia <= 5) && !statusDetect){
     statusDetect = 1;
-    lastTime = millis();
-    
     if(WiFi.status() == WL_CONNECTED){
       String requestUrl = "http://api.callmebot.com/whatsapp.php?phone="+whats+"&text="+messageToSend+"&apikey="+apiKey; 
       http.begin(client, requestUrl);
