@@ -11,8 +11,8 @@ const char* password = "morais1212";
 bool statusBt = 0;
 unsigned long lastTime = 0;
 
-String apiKey = "";
-String whats = "";
+String apiKey = "3466759";
+String whats = "558597498597";
 String messageToSend = "Botão+1+Acionado.";
 
 void setup(){
