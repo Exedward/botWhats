@@ -17,6 +17,7 @@ const char* password = PASSWORD_WIFI; //De credenciais
 bool statusDetect = 0;
 unsigned long cm = 10, timeIntervalUltra = 0;
 float distancia = 0;
+int ok = 0;
 
 String apiKey = API_KEY; //De credenciais
 String whats = NUMBER_WHATS; //De credenciais
