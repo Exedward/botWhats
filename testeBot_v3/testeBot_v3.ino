@@ -2,6 +2,7 @@
 #include <WiFiManager.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
+#include "credenciais.h"
 #include <MediaMovel.h>
 #include <Edu_Ultrassonico.h>
 
@@ -11,14 +12,14 @@ WiFiManager wm;
 Ultrassonico  ultra(D1, D2); //Echo, Trigger
 MM  mms(10);
 
-const char* ssid = "TP LINK";
-const char* password = "morais1212";
+const char* ssid = SSID_WIFI; //De credenciais
+const char* password = PASSWORD_WIFI; //De credenciais
 bool statusDetect = 0;
 unsigned long cm = 10, timeIntervalUltra = 0;
 float distancia = 0;
 
-String apiKey = "3466759";
-String whats = "558597498597";
+String apiKey = API_KEY; //De credenciais
+String whats = NUMBER_WHATS; //De credenciais
 String messageToSend = "Botão+1+Acionado.";
 
 void setup(){
